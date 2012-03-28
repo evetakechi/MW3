@@ -3,11 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>features and gallery</title>
-<link rel="stylesheet" href="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" />
 <link rel="stylesheet" href="jquery.fancybox-1.3.4/style.css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<link rel="stylesheet" href="diapo/diapo.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+
 <script type="text/javascript" src="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <script type="text/javascript" src="jquery.fancybox-1.3.4/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="diapo/scripts/jquery.easing.1.3.js"></script> 
+<script type="text/javascript" src="diapo/scripts/jquery.hoverIntent.minified.js"></script> 
+<script type="text/javascript" src="diapo/scripts/diapo.js"></script> 
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -27,28 +33,138 @@ $(document).ready(function() {
 					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
 				}
 	});
+	
+	
+		$('.pix_diapo').diapo();
+	
+	
 });
 </script>
+
 </head>
 
 <body>
-<div id="content">
+	<!-- Section 1 -->
+	<section id="content">
 	
-	<h1 style="text-align:center ;text-size:18px;"><b>Features</b></h1>
-    <hr/>
-    <p align="center">
-    <a class="featureOne" href="jquery.fancybox-1.3.4/example/2_b.jpg" title="Simple search"><img src="jquery.fancybox-1.3.4/example/2_s.jpg"/></a>
-    <a class="featureOne" href="jquery.fancybox-1.3.4/example/1_b.jpg" title="1 file 1 second"><img src="jquery.fancybox-1.3.4/example/1_s.jpg"/></a>
-    <a class="featureOne" href="jquery.fancybox-1.3.4/example/12_b.jpg" title="A lot of records"><img src="jquery.fancybox-1.3.4/example/12_s.jpg"/> </a>
-    </p>
-    <hr/>
-    <p>
-    <a rel="features_gallery" href="jquery.fancybox-1.3.4/example/9_b.jpg" title="one"><img src="jquery.fancybox-1.3.4/example/9_s.jpg"/></a>
-    <a rel="features_gallery" href="jquery.fancybox-1.3.4/example/10_b.jpg" title="two"><img src="jquery.fancybox-1.3.4/example/10_s.jpg"/></a>
-    <a rel="features_gallery" href="jquery.fancybox-1.3.4/example/11_b.jpg" title="three"><img src="jquery.fancybox-1.3.4/example/11_s.jpg"/></a>
-    <a rel="features_gallery" href="jquery.fancybox-1.3.4/example/1_b.jpg" title="four"><img src="jquery.fancybox-1.3.4/example/1_s.jpg"/></a>
-    </p>
-    
-</div>
+		<h1 style="text-align:center ;text-size:18px;"><b>Features</b></h1>
+		<hr/>
+		<p align="center">
+			<a class="featureOne" href="jquery.fancybox-1.3.4/example/2_b.jpg" title="Simple search"><img src="jquery.fancybox-1.3.4/example/2_s.jpg"/></a>
+			<a class="featureOne" href="jquery.fancybox-1.3.4/example/1_b.jpg" title="1 file 1 second"><img src="jquery.fancybox-1.3.4/example/1_s.jpg"/></a>
+			<a class="featureOne" href="jquery.fancybox-1.3.4/example/12_b.jpg" title="A lot of records"><img src="jquery.fancybox-1.3.4/example/12_s.jpg"/> </a>
+		</p>
+<!--Block
+		<hr/>
+
+		<p align="center">
+			<a rel="features_gallery" href="jquery.fancybox-1.3.4/example/9_b.jpg" title="one"><img src="jquery.fancybox-1.3.4/example/9_s.jpg"/></a>
+			<a rel="features_gallery" href="jquery.fancybox-1.3.4/example/10_b.jpg" title="two"><img src="jquery.fancybox-1.3.4/example/10_s.jpg"/></a>
+			<a rel="features_gallery" href="jquery.fancybox-1.3.4/example/11_b.jpg" title="three"><img src="jquery.fancybox-1.3.4/example/11_s.jpg"/></a>
+			<a rel="features_gallery" href="jquery.fancybox-1.3.4/example/1_b.jpg" title="four"><img src="jquery.fancybox-1.3.4/example/1_s.jpg"/></a>
+		</p>
+-->
+	</section>
+
+	<!-- Section 2 -->
+	<section>
+		<div style="overflow:hidden; width:960px; margin: 100px auto; padding:0 20px;">
+			<div class="pix_diapo diapostarted stopped">
+				<!-- Image 1 -->
+				<div data-thumb="diapo/images/Pic/thumb/T01.png" style="margin-top: 0px; margin-left: 0px; display: block; z-index: 999" class="diapocurrent">
+					<div class="pix_relativize" style="width:940px; height:470px">
+						<img src="diapo/images/Pic/email1.png"/>
+						<div class="elemHover caption fromLeft" style="bottom: 70px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; width: 333px; right: auto; left: 0px; visibility: hidden">Let's see the Email Brands: 
+                    	</div>
+						<div class="elemHover fromTop" data-easing="easeOutExpo" style="left: 388px; width: 69px; bottom: auto; top: 350px; visibility: hidden">
+							<a class="featureOne" href="diapo/images/Pic/email2.png" title="Email brands">
+							<img src="diapo/images/Pic/button/b1.png"/>
+							</a> 
+                    	</div>
+					</div>
+				</div>
+
+				<!-- Image 2 -->
+				<div data-thumb="diapo/images/Pic/thumb/T02.png" style="z-index: 1; display: none" class="">
+					<div class="pix_relativize" style="width:940px; height:470px">
+							<img src="diapo/images/Pic/resultData.png"/>
+						<div class="elemHover caption fromLeft" style="bottom: 70px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; width: 333px; right: auto; left: 0px; visibility: hidden"> Click button! to view: 
+                    	</div>
+						<div class="elemHover fromTop" data-easing="easeOutExpo" style="left: 388px; width: 69px; bottom: auto; top: 350px; visibility: hidden">
+							<a class="featureOne" href="diapo/images/Pic/preview.png" title="Preview">
+							<img src="diapo/images/Pic/button/b2.png"/>
+							</a> 
+                    	</div>
+						<div class="elemHover fromTop" data-easing="easeOutExpo" style="left: 517px; width: 69px; bottom: auto; top: 350px; visibility: hidden">
+                            <a class="featureOne" href="diapo/images/Pic/metadata.png" title="Metadata">
+							<img src="diapo/images/Pic/button/b3.png"/>
+							</a>
+                        </div>
+						<div class="elemHover fromTop" data-easing="easeOutExpo" style="left: 646px; width: 69px; bottom: auto; top: 350px; visibility: hidden">
+                            <a class="featureOne" href="diapo/images/Pic/download.png" title="Download">
+							<img src="diapo/images/Pic/button/b4.png"/>
+							</a>
+                        </div>
+					</div>
+				</div>
+
+				<!-- Image 3 -->
+				<div data-thumb="diapo/images/Pic/thumb/T03.png" data-time="7000" style="margin-top: 0px; margin-left: 0px; z-index: 1; display: none" class="">
+					<div class="pix_relativize" style="width:940px; height:470px">
+							<img src="diapo/images/Pic/printPreview.png"/>
+						<div class="elemHover caption fromLeft" style="bottom: 70px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; width: 333px; right: auto; left: 0px; visibility: hidden">When you click "Print preview",you can see like this picture and then Click!: 
+                    	</div>
+						<div class="elemHover fromTop" data-easing="easeOutExpo" style="left: 388px; width: 69px; bottom: auto; top: 350px; visibility: hidden">
+							<a class="featureOne" href="diapo/images/Pic/custom screen.png" title="Custom screenshot">
+							<img src="diapo/images/Pic/button/b5.png"/>
+							</a> 
+                    	</div>
+
+					</div>
+				</div>
+
+				<!-- Image 4 
+				<div data-thumb="diapo/images/thumbs/up-official-trailer-fake.jpg" style="z-index: 1; display: none" class="">
+					<div class="pix_relativize" style="width:940px; height:470px">
+						<img src="diapo/images/slides/up-official-trailer-fake.jpg" class="imgFake"/>
+						<div class="elemHover caption fromLeft elemToHide" style="bottom: 350px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; width: 575px; right: auto; left: 0px; visibility: hidden">
+							You can also display videos, but it requires a "fake image"... read the documentation please
+						</div>
+					</div>
+				</div>
+				-->
+				<!-- Image 5 
+				<div data-thumb="diapo/images/thumbs/big_buck_bunny.jpg" data-time="7000" style="margin-top: 0px; z-index: 1; display: none; margin-left: 0px" class="">
+					<div class="pix_relativize" style="width:940px; height:470px">
+						<div style="position:absolute; top:0; left:0; width:900px; height:430px; padding:20px; background:#fff; color:#222;">
+							<div style="float:left; width:300px;">
+								<p>
+									<br/>
+									<br/>
+									You can display any html element directly in the slider, but pay attention, with many elements the transition effect could be slowed.
+									<br/>
+									In this case you can see a Vimeo video and a price table
+								</p>
+								<img src="diapo/images/slides/big_buck_bunny.jpg" class="imgFake"/>
+							</div>
+						</div>
+                    </div>
+				</div>
+				-->
+				<!-- Image 6 
+				<div data-thumb="diapo/images/thumbs/ratatouille2.jpg" style="z-index: 1; display: none" class="">
+					<div class="pix_relativize" style="width:940px; height:470px">
+						<img src="diapo/images/slides/ratatouille2.jpg"/>
+					</div>
+				</div>
+				-->
+				<!--
+				<canvas id="pix_canvas" width="50" height="50" style="position: absolute; z-index: 1002; top: 5px; right: 5px; display: none; opacity: 0.8"/>
+				<div id="pix_prev" style="opacity: 1"/>
+				<div id="pix_next" style="opacity: 1"/>
+				-->
+			</div><!-- #pix_diapo -->
+		</div>
+	</section>
 </body>
 </html>
