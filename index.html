@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Mediawrap Features</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/diapo.css"/>
+  <link rel="stylesheet" href="js/jquery.fancybox/jquery.fancybox-1.3.4.css" />
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile/jquery.mobile-1.1.0-rc.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> 
+  <script type="text/javascript" src="js/jquery.mousewheel.3.0.4.pack.js"></script>
+  <script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script> 
+  <script type="text/javascript" src="js/diapo.min.js"></script> 
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+    $("a.featureOne").fancybox({
+      'titlePosition':'inside',
+      'opacity'		: true,
+      'overlayShow'	: false,
+      'transitionIn'	: 'elastic',
+      'transitionOut'	: 'none'
+    });
+
+    $("a[rel=features_gallery]").fancybox({
+      'transitionIn'		: 'none',
+      'transitionOut'		: 'none',
+      'titlePosition' 	: 'over',
+      'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+        return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+      }
+    });
+
+    $('.pix_diapo').diapo();
+  });
+  </script>
+
+</head>
+
+<body>
+  <!-- Section 1 -->
+  <section id="content">
+    <h1 style="text-align:center ;text-size:18px;"><b>Features</b></h1>
+    <hr/>
+    <p align="center">
+      <a class="featureOne" href="images/features/featB.png" title="Collect The Most Brands">
+        <img src="images/features/featS1.png"/>
+      </a>
+      <a class="featureOne" href="images/features/featB2.png" title="Simple Search">
+        <img src="images/features/featS2.png"/>
+      </a>
+      <a class="featureOne" href="images/features/featB3.png" title="Metadata">
+        <img src="images/features/featS3.png"/>
+      </a>
+    </p>
+  </section>
+
+  <!-- Section 2 -->
+  <section>
+    <div style="overflow:hidden; width:960px; margin: 100px auto; padding:0 20px;">
+      <div class="pix_diapo diapostarted stopped">
+        <!-- Image 1 -->
+        <div data-thumb="images/Pic/thumb/T01.png" style="margin-top: 0px; margin-left: 0px; display: block; z-index: 999" class="diapocurrent">
+          <div class="pix_relativize" style="width:940px; height:470px">
+            <img src="images/Pic/email1.png" />
+            <div class="elemHover caption fromLeft" style="bottom: 70px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; width: 333px; right: auto; left: 0px; visibility: hidden">
+              Let's see the Email Brands: 
+            </div>
+            <div class="elemHover fromTop" data-easing="easeOutExpo" style="left: 388px; width: 69px; bottom: auto; top: 350px; visibility: hidden">
+              <a class="featureOne" href="images/Pic/email2.png" title="Email brands">
+                <img src="images/Pic/button/b1.png" />
+              </a> 
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div data-thumb="images/Pic/thumb/T02.png" style="z-index: 1; display: none" class="">
+          <div class="pix_relativize" style="width:940px; height:470px">
+            <img src="images/Pic/resultData.png"/>
+            <div class="elemHover caption fromLeft" style="bottom: 70px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; width: 333px; right: auto; left: 0px; visibility: hidden">
+              Click button! to view: 
+            </div>
+            <div class="elemHover fromTop" data-easing="easeOutExpo" style="left: 388px; width: 69px; bottom: auto; top: 350px; visibility: hidden">
+              <a class="featureOne" href="images/Pic/preview.png" title="Preview">
+                <img src="images/Pic/button/b2.png" />
+              </a>
+            </div>
+            <div class="elemHover fromTop" data-easing="easeOutExpo" style="left: 517px; width: 69px; bottom: auto; top: 350px; visibility: hidden">
+              <a class="featureOne" href="images/Pic/metadata.png" title="Metadata">
+                <img src="images/Pic/button/b3.png"/>
+              </a>
+            </div>
+            <div class="elemHover fromTop" data-easing="easeOutExpo" style="left: 646px; width: 69px; bottom: auto; top: 350px; visibility: hidden">
+              <a class="featureOne" href="images/Pic/download.png" title="Download">
+                <img src="images/Pic/button/b4.png"/>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div data-thumb="images/Pic/thumb/T03.png" data-time="7000" style="margin-top: 0px; margin-left: 0px; z-index: 1; display: none" class="">
+          <div class="pix_relativize" style="width:940px; height:470px">
+            <img src="images/Pic/printPreview.png"/>
+            <div class="elemHover caption fromLeft" style="bottom: 70px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; width: 333px; right: auto; left: 0px; visibility: hidden">
+              When you click "Print preview",you can see like this picture and then Click!: 
+            </div>
+            <div class="elemHover fromTop" data-easing="easeOutExpo" style="left: 388px; width: 69px; bottom: auto; top: 350px; visibility: hidden">
+              <a class="featureOne" href="images/Pic/custom screen.png" title="Custom screenshot">
+                <img src="images/Pic/button/b5.png"/>
+              </a> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #pix_diapo -->
+    </div>
+  </section>
+</body>
+</html>
